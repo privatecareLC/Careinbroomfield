@@ -543,7 +543,7 @@ section { padding: 96px 24px; }
   font-weight: 300;
 }
 
-/* ===== REVIEW ===== */
+/* ===== REVIEW CAROUSEL ===== */
 #review {
   background: linear-gradient(160deg, var(--cream-green) 0%, var(--sage-pale) 50%, var(--cream) 100%);
   position: relative;
@@ -556,20 +556,30 @@ section { padding: 96px 24px; }
   background: linear-gradient(90deg, transparent, var(--gold), transparent);
 }
 
-.reviews-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
+/* Carousel wrapper */
+.reviews-carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.reviews-track {
+  display: flex;
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
 }
 
 .review-box {
+  flex: 0 0 100%;
+  width: 100%;
   background: #fff;
   border-radius: 20px;
-  padding: 40px 36px 36px;
+  padding: 48px 52px 44px;
   position: relative;
   overflow: hidden;
   border: 1px solid rgba(201,149,42,0.2);
   box-shadow: 0 4px 24px rgba(201,149,42,0.07);
+  box-sizing: border-box;
 }
 .review-box::before {
   font-family: 'Playfair Display', serif;
@@ -629,6 +639,60 @@ section { padding: 96px 24px; }
   width: 32px;
   height: 1px;
   background: var(--gold);
+}
+
+/* Carousel controls */
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 32px;
+}
+
+.carousel-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--gold-border);
+  background: rgba(255,255,255,0.85);
+  color: var(--gold);
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+  backdrop-filter: blur(8px);
+  line-height: 1;
+}
+.carousel-btn:hover {
+  background: var(--gold);
+  color: #fff;
+  border-color: var(--gold);
+  transform: scale(1.08);
+  box-shadow: 0 4px 16px rgba(201,149,42,0.28);
+}
+
+.carousel-dots {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gold-dim);
+  border: 1px solid var(--gold-border);
+  cursor: pointer;
+  transition: background 0.25s, transform 0.25s, width 0.25s;
+}
+.carousel-dot.active {
+  background: var(--gold);
+  width: 24px;
+  border-radius: 4px;
+  border-color: var(--gold);
 }
 
 /* ===== ABOUT ===== */

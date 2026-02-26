@@ -164,44 +164,59 @@
       </div>
     </section>
 
-    <!-- REVIEWS -->
+    <!-- REVIEWS CAROUSEL -->
     <section id="review">
       <div class="container">
         <p class="section-label fade-in">Client Testimonials</p>
         <h2 class="section-title fade-in">What Families Say</h2>
-        <div class="reviews-grid">
-          <div class="review-box fade-in">
-            <span class="stars">★★★★★</span>
-            <p class="review-text">
-              Linda was a caregiver for my mother for 10 years. She was one of the
-              best we ever had. She was very reliable, patient, trustworthy and
-              caring. She took excellent care of my mother and went above and
-              beyond, and was always willing to help at the drop of a hat. My
-              mother really loved her and so did we.
-            </p>
-            <p class="review-author">Carol H.</p>
-          </div>
-          <div class="review-box fade-in">
-            <span class="stars">★★★★★</span>
-            <p class="review-text">
-              Linda has been my caregiver since January 2019. She is very reliable
-              and dependable. I can count on her to do things efficiently — when
-              she sees things that need to be done, she does it without being told.
-              Linda treats me with kindness and respect.
-            </p>
-            <p class="review-author">Meris M.</p>
-          </div>
-          <div class="review-box fade-in">
-            <span class="stars">★★★★★</span>
-            <p class="review-text">
-              Linda was responsible, caring and attentive. She consistently
-              demonstrated professionalism and heartfelt dedication. Her respectful
-              approach and gentle patience created a sense of dignity and trust for
-              my father.
-            </p>
-            <p class="review-author">Luanne Oroszi</p>
+
+        <div class="reviews-carousel fade-in" id="reviewsCarousel">
+          <div class="reviews-track" id="reviewsTrack">
+
+            <div class="review-box">
+              <span class="stars">★★★★★</span>
+              <p class="review-text">
+                Linda was a caregiver for my mother for 10 years. She was one of the
+                best we ever had. She was very reliable, patient, trustworthy and
+                caring. She took excellent care of my mother and went above and
+                beyond, and was always willing to help at the drop of a hat. My
+                mother really loved her and so did we.
+              </p>
+              <p class="review-author">Carol H.</p>
+            </div>
+
+            <div class="review-box">
+              <span class="stars">★★★★★</span>
+              <p class="review-text">
+                Linda has been my caregiver since January 2019. She is very reliable
+                and dependable. I can count on her to do things efficiently — when
+                she sees things that need to be done, she does it without being told.
+                Linda treats me with kindness and respect.
+              </p>
+              <p class="review-author">Meris M.</p>
+            </div>
+
+            <div class="review-box">
+              <span class="stars">★★★★★</span>
+              <p class="review-text">
+                Linda was responsible, caring and attentive. She consistently
+                demonstrated professionalism and heartfelt dedication. Her respectful
+                approach and gentle patience created a sense of dignity and trust for
+                my father.
+              </p>
+              <p class="review-author">Luanne Oroszi</p>
+            </div>
+
           </div>
         </div>
+
+        <!-- Controls -->
+        <div class="carousel-controls">
+          <button class="carousel-btn" id="carouselPrev" aria-label="Previous review">&#8592;</button>
+          <div class="carousel-dots" id="carouselDots"></div>
+          <button class="carousel-btn" id="carouselNext" aria-label="Next review">&#8594;</button>
+        </div>
+
       </div>
     </section>
 
