@@ -29,14 +29,13 @@ window.addEventListener('scroll', () => {
   const prevBtn = document.getElementById('carouselPrev');
   const nextBtn = document.getElementById('carouselNext');
 
-  if (!track) return;
+  if (!track || !dotsContainer || !prevBtn || !nextBtn) return; // ✅ guard all elements
 
   const slides = Array.from(track.children);
   const total = slides.length;
   let current = 0;
   let autoplayTimer = null;
 
-  // Build dots
   slides.forEach((_, i) => {
     const dot = document.createElement('button');
     dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
@@ -57,17 +56,9 @@ window.addEventListener('scroll', () => {
     updateDots();
   }
 
-  prevBtn.addEventListener('click', () => {
-    goTo(current - 1);
-    resetAutoplay();
-  });
+  prevBtn.addEventListener('click', () => { goTo(current - 1); resetAutoplay(); });
+  nextBtn.addEventListener('click', () => { goTo(current + 1); resetAutoplay(); });
 
-  nextBtn.addEventListener('click', () => {
-    goTo(current + 1);
-    resetAutoplay();
-  });
-
-  // Autoplay
   function startAutoplay() {
     autoplayTimer = setInterval(() => goTo(current + 1), 5000);
   }
@@ -77,21 +68,43 @@ window.addEventListener('scroll', () => {
   }
   startAutoplay();
 
-  // Touch/swipe support
   let touchStartX = 0;
   const carousel = document.getElementById('reviewsCarousel');
-  carousel.addEventListener('touchstart', e => {
-    touchStartX = e.changedTouches[0].clientX;
-  }, { passive: true });
-  carousel.addEventListener('touchend', e => {
-    const diff = touchStartX - e.changedTouches[0].clientX;
-    if (Math.abs(diff) > 40) {
-      goTo(diff > 0 ? current + 1 : current - 1);
-      resetAutoplay();
-    }
-  }, { passive: true });
+  if (carousel) {
+    carousel.addEventListener('touchstart', e => {
+      touchStartX = e.changedTouches[0].clientX;
+    }, { passive: true });
+    carousel.addEventListener('touchend', e => {
+      const diff = touchStartX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) {
+        goTo(diff > 0 ? current + 1 : current - 1);
+        resetAutoplay();
+      }
+    }, { passive: true });
+  }
 
-  // Pause on hover
-  carousel.addEventListener('mouseenter', () => clearInterval(autoplayTimer));
-  carousel.addEventListener('mouseleave', startAutoplay);
+})(); // ✅ carousel IIFE properly closed here
+
+// ===== SERVICES ACCORDION =====
+(function () {
+  const accordion = document.getElementById('servicesAccordion');
+  if (!accordion) return;
+
+  accordion.addEventListener('click', (e) => {
+    const trigger = e.target.closest('.accordion-trigger');
+    if (!trigger) return;
+
+    const item = trigger.closest('.accordion-item');
+    const isOpen = item.classList.contains('open');
+
+    accordion.querySelectorAll('.accordion-item.open').forEach(openItem => {
+      openItem.classList.remove('open');
+      openItem.querySelector('.accordion-trigger').setAttribute('aria-expanded', 'false');
+    });
+
+    if (!isOpen) {
+      item.classList.add('open');
+      trigger.setAttribute('aria-expanded', 'true');
+    }
+  });
 })();

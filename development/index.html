@@ -48,10 +48,7 @@
 
     <!-- TAGLINE STRIP -->
     <div class="tagline-strip">
-      <em
-        >"I provide <span>valuable private in-home care</span> — tailored to
-        you."</em
-      >
+      <em>"I provide <span>valuable private in-home care</span> — tailored to you."</em>
     </div>
 
     <!-- MISSION STATEMENT -->
@@ -66,7 +63,7 @@
       <p class="mission-sig">With Warmth, Linda 🌻</p>
     </div>
 
-    <!-- SERVICES -->
+    <!-- SERVICES — ACCORDION -->
     <section id="services">
       <div class="container">
         <p class="section-label fade-in">Services</p>
@@ -76,60 +73,118 @@
           comfortable, safe, and dignified at home. Every schedule and service
           is custom-tailored to fit your family's needs.
         </p>
-        <div class="services-grid">
-          <div class="service-card fade-in">
-            <span class="service-icon">💊</span>
-            <h3>Medication Assistance</h3>
-            <p>Reminders and oversight to keep medications on schedule.</p>
+
+        <div class="accordion fade-in" id="servicesAccordion">
+
+          <div class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="false">
+              <span class="accordion-icon">💊</span>
+              <span class="accordion-title">Medication Assistance</span>
+              <span class="accordion-chevron" aria-hidden="true"></span>
+            </button>
+            <div class="accordion-body" role="region">
+              <div class="accordion-body-inner">
+                <p class="accordion-content">Reminders and careful oversight to keep medications on schedule — so nothing gets missed and your loved one stays safe and on track every day.</p>
+              </div>
+            </div>
           </div>
-          <div class="service-card fade-in">
-            <span class="service-icon">🍳</span>
-            <h3>Cooking &amp; Meals</h3>
-            <p>Nutritious meal preparation and kitchen care.</p>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="false">
+              <span class="accordion-icon">🍳</span>
+              <span class="accordion-title">Cooking &amp; Meals</span>
+              <span class="accordion-chevron" aria-hidden="true"></span>
+            </button>
+            <div class="accordion-body" role="region">
+              <div class="accordion-body-inner">
+                <p class="accordion-content">Nutritious, home-cooked meal preparation tailored to dietary preferences and needs, along with light kitchen cleanup so the space stays tidy and safe.</p>
+              </div>
+            </div>
           </div>
-          <div class="service-card fade-in">
-            <span class="service-icon">🏠</span>
-            <h3>Light Housekeeping</h3>
-            <p>Tidy, safe surroundings — laundry, tidying, and more.</p>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="false">
+              <span class="accordion-icon">🏠</span>
+              <span class="accordion-title">Light Housekeeping</span>
+              <span class="accordion-chevron" aria-hidden="true"></span>
+            </button>
+            <div class="accordion-body" role="region">
+              <div class="accordion-body-inner">
+                <p class="accordion-content">Maintaining a tidy, comfortable home environment — laundry, light tidying, vacuuming, and general upkeep so your loved one can enjoy a safe, organized space.</p>
+              </div>
+            </div>
           </div>
-          <div class="service-card fade-in">
-            <span class="service-icon">🚗</span>
-            <h3>Appointments &amp; Errands</h3>
-            <p>Transportation to medical visits, grocery runs, and errands.</p>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="false">
+              <span class="accordion-icon">🚗</span>
+              <span class="accordion-title">Appointments &amp; Errands</span>
+              <span class="accordion-chevron" aria-hidden="true"></span>
+            </button>
+            <div class="accordion-body" role="region">
+              <div class="accordion-body-inner">
+                <p class="accordion-content">Reliable transportation to medical appointments, specialist visits, grocery trips, and everyday errands — so your family member stays connected and independent.</p>
+              </div>
+            </div>
           </div>
-          <div class="service-card fade-in">
-            <span class="service-icon">🛁</span>
-            <h3>Personal Care</h3>
-            <p>Assistance with bathing, showers, and dressing with dignity.</p>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="false">
+              <span class="accordion-icon">🛁</span>
+              <span class="accordion-title">Personal Care</span>
+              <span class="accordion-chevron" aria-hidden="true"></span>
+            </button>
+            <div class="accordion-body" role="region">
+              <div class="accordion-body-inner">
+                <p class="accordion-content">Compassionate, dignified assistance with bathing, showers, grooming, and dressing — always delivered with respect, patience, and sensitivity.</p>
+              </div>
+            </div>
           </div>
-          <div class="service-card fade-in">
-            <span class="service-icon">🤝</span>
-            <h3>Companion Care</h3>
-            <p>
-              Genuine companionship — conversation, activities, and presence.
-            </p>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="false">
+              <span class="accordion-icon">🤝</span>
+              <span class="accordion-title">Companion Care</span>
+              <span class="accordion-chevron" aria-hidden="true"></span>
+            </button>
+            <div class="accordion-body" role="region">
+              <div class="accordion-body-inner">
+                <p class="accordion-content">Genuine presence and companionship — conversation, shared activities, walks, or simply being there. Meaningful connection makes every day brighter.</p>
+              </div>
+            </div>
           </div>
-          <div class="service-card fade-in">
-            <span class="service-icon">🐾</span>
-            <h3>Pet-Friendly</h3>
-            <p>
-              Comfortable with dogs — no need to worry about your four-legged
-              family member.
-            </p>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="false">
+              <span class="accordion-icon">🐾</span>
+              <span class="accordion-title">Pet-Friendly</span>
+              <span class="accordion-chevron" aria-hidden="true"></span>
+            </button>
+            <div class="accordion-body" role="region">
+              <div class="accordion-body-inner">
+                <p class="accordion-content">Comfortable and happy around dogs — your four-legged family member is always welcome. No need to arrange alternative care or worry about your pet.</p>
+              </div>
+            </div>
           </div>
-          <div class="service-card fade-in">
-            <span class="service-icon">📋</span>
-            <h3>Custom Scheduling</h3>
-            <p>
-              Flexible schedules built entirely around your needs — not a
-              one-size-fits-all plan.
-            </p>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="false">
+              <span class="accordion-icon">📋</span>
+              <span class="accordion-title">Custom Scheduling</span>
+              <span class="accordion-chevron" aria-hidden="true"></span>
+            </button>
+            <div class="accordion-body" role="region">
+              <div class="accordion-body-inner">
+                <p class="accordion-content">Flexible schedules built entirely around your family's needs — a few hours a week or a more consistent routine. No rigid packages, no one-size-fits-all plans.</p>
+              </div>
+            </div>
           </div>
+
         </div>
       </div>
     </section>
 
-    <!-- CONTINUED EDUCATION -->
+    <!-- CONTINUED EDUCATION — POSTER BLOCKS -->
     <section id="education">
       <div class="container">
         <p class="section-label fade-in">Training &amp; Credentials</p>
@@ -139,27 +194,41 @@
           formal training — so you can trust that care is delivered safely,
           knowledgeably, and with skill.
         </p>
-        <div class="edu-grid">
-          <div class="edu-card fade-in">
-            <span class="edu-icon">🎓</span>
+
+        <div class="edu-poster-grid">
+
+          <div class="edu-poster-block fade-in">
+            <span class="edu-poster-num">01</span>
+            <span class="edu-poster-icon">🎓</span>
             <h3>100-Hour Certified Training</h3>
+            <span class="edu-poster-rule"></span>
             <p>Completed 100 hours of classroom instruction and hands-on lab training through a professional caregiver certification program.</p>
           </div>
-          <div class="edu-card fade-in">
-            <span class="edu-icon">🔄</span>
+
+          <div class="edu-poster-block fade-in">
+            <span class="edu-poster-num">02</span>
+            <span class="edu-poster-icon">🔄</span>
             <h3>Safe Transfers &amp; Fall Prevention</h3>
+            <span class="edu-poster-rule"></span>
             <p>Formally trained in safe client transfers, fall prevention techniques, and proper hygiene care protocols.</p>
           </div>
-          <div class="edu-card fade-in">
-            <span class="edu-icon">🧠</span>
+
+          <div class="edu-poster-block fade-in">
+            <span class="edu-poster-num">03</span>
+            <span class="edu-poster-icon">🧠</span>
             <h3>Dementia Care Education</h3>
+            <span class="edu-poster-rule"></span>
             <p>Comprehensive dementia-care education covering communication strategies, behavioral responses, and compassionate daily support.</p>
           </div>
-          <div class="edu-card fade-in">
-            <span class="edu-icon">👴</span>
+
+          <div class="edu-poster-block fade-in">
+            <span class="edu-poster-num">04</span>
+            <span class="edu-poster-icon">👴</span>
             <h3>Aging Process &amp; Care Needs</h3>
+            <span class="edu-poster-rule"></span>
             <p>Specialized knowledge of the aging process, age-related conditions, and the evolving care needs of older adults.</p>
           </div>
+
         </div>
       </div>
     </section>
@@ -210,7 +279,6 @@
           </div>
         </div>
 
-        <!-- Controls -->
         <div class="carousel-controls">
           <button class="carousel-btn" id="carouselPrev" aria-label="Previous review">&#8592;</button>
           <div class="carousel-dots" id="carouselDots"></div>
@@ -260,31 +328,19 @@
               <h3>A Little About Linda 🌻</h3>
               <div class="fun-fact-item">
                 <span class="emoji">🐕</span>
-                <p>
-                  Walking daily with <strong>Simon</strong>, my 5-year-old
-                  rescue pup — he keeps me active.
-                </p>
+                <p>Walking daily with <strong>Simon</strong>, my 5-year-old rescue pup — he keeps me active.</p>
               </div>
               <div class="fun-fact-item">
                 <span class="emoji">🍝</span>
-                <p>
-                  Favorite restaurant: <strong>Carelli's Italian</strong> in
-                  Boulder — great food is one of life's pleasures.
-                </p>
+                <p>Favorite restaurant: <strong>Carelli's Italian</strong> in Boulder — great food is one of life's pleasures.</p>
               </div>
               <div class="fun-fact-item">
                 <span class="emoji">🚗</span>
-                <p>
-                  Attending <strong>antique car shows</strong> — a Colorado
-                  tradition worth celebrating.
-                </p>
+                <p>Attending <strong>antique car shows</strong> — a Colorado tradition worth celebrating.</p>
               </div>
               <div class="fun-fact-item">
                 <span class="emoji">🪂</span>
-                <p>
-                  Yes, I've <strong>skydived</strong> — the most exhilarating
-                  thing I've ever done.
-                </p>
+                <p>Yes, I've <strong>skydived</strong> — the most exhilarating thing I've ever done.</p>
               </div>
             </div>
           </div>
@@ -303,7 +359,6 @@
             id="businessCard"
             onclick="this.classList.toggle('flipped')"
           >
-            <!-- Front -->
             <div class="card-face">
               <div class="card-border-top"></div>
               <div class="card-border-bottom"></div>
@@ -311,24 +366,17 @@
               <div class="card-name">Linda</div>
               <div class="card-rule"></div>
               <div class="card-title">Private Caregiver · Since 2001</div>
-              <div class="card-tagline">
-                "Personalized in-home care with heart."
-              </div>
+              <div class="card-tagline">"Personalized in-home care with heart."</div>
             </div>
-            <!-- Back -->
             <div class="card-back">
               <div class="card-border-top"></div>
               <div class="card-border-bottom"></div>
               <div class="back-name">Linda · Private Caregiver</div>
-              <div class="back-item">
-                📍 <strong>Colorado</strong> — In-Home &amp; Companion Care
-              </div>
+              <div class="back-item">📍 <strong>Colorado</strong> — In-Home &amp; Companion Care</div>
               <div class="back-item">📞 <strong>Your Phone Number</strong></div>
               <div class="back-item">✉️ <strong>Your Email</strong></div>
               <div class="back-item">🌐 <strong>Your Website</strong></div>
-              <div class="back-badge">
-                Bonded &amp; Insured · References Available · Dog Friendly
-              </div>
+              <div class="back-badge">Bonded &amp; Insured · References Available · Dog Friendly</div>
             </div>
           </div>
         </div>
