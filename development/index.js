@@ -29,7 +29,7 @@ window.addEventListener('scroll', () => {
   const prevBtn = document.getElementById('carouselPrev');
   const nextBtn = document.getElementById('carouselNext');
 
-  if (!track || !dotsContainer || !prevBtn || !nextBtn) return; // ✅ guard all elements
+  if (!track || !dotsContainer || !prevBtn || !nextBtn) return;
 
   const slides = Array.from(track.children);
   const total = slides.length;
@@ -83,7 +83,7 @@ window.addEventListener('scroll', () => {
     }, { passive: true });
   }
 
-})(); // ✅ carousel IIFE properly closed here
+})();
 
 // ===== SERVICES ACCORDION =====
 (function () {
