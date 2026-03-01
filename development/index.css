@@ -53,6 +53,22 @@ body {
 }
 
 /* ===== NAV ===== */
+.nav-sunflower {
+  position: relative;
+  /* left: 5px; */
+  /* top: 50%; */
+  z-index: 99;
+  /* pointer-events: none; */
+}
+
+.nav-sunflower-img {
+  width: 22px;
+  height: 22px;
+  /* object-fit: contain; */
+  opacity: 1;
+  /* display: block; */
+}
+
 nav {
   position: fixed;
   top: 0;
@@ -286,8 +302,8 @@ nav.scrolled {
 
 @media (max-width: 500px) {
   .sunflower-img {
-    width: 600px;
-    height: 600px;
+    width: 500px;
+    height: 500px;
   }
 }
 
@@ -494,19 +510,30 @@ section {
 }
 
 /* ===== SERVICES — 2-COLUMN ACCORDION ===== */
+.services-sunflower{
+  position: absolute;
+  top: 5%;
+  /* transform: translateX(100%); */
+  right: 5%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.side-sunflower-img {
+  width: 280px;
+  height: 280px;
+  object-fit: contain;
+  /* animation: sunflower-spin 60s linear infinite; */
+  filter: drop-shadow(0 8px 40px rgba(201, 149, 42, 0.45));
+  mix-blend-mode: multiply;
+  opacity: 0.2;
+  display: block;
+}
+
 #services {
   background: var(--warm-white);
   position: relative;
 }
-/* #services::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--gold), transparent);
-} */
 
 .services-intro {
   font-size: 1.02rem;
@@ -560,9 +587,6 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
-  background: rgba(201, 149, 42, 0.07);
-  border: 1px solid rgba(201, 149, 42, 0.15);
   transition:
     background 0.3s,
     border-color 0.3s,
@@ -570,9 +594,8 @@ section {
 }
 
 .accordion-item.open .accordion-icon {
-  background: var(--gold);
-  border-color: var(--gold);
-  transform: scale(1.06);
+  
+  transform: scale(1.08) rotate(5deg);
 }
 
 .accordion-title {
@@ -664,18 +687,7 @@ section {
     transparent 60%
   );
 }
-.accordion-item::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: var(--gold);
-  transform: scaleY(0);
-  transform-origin: top;
-  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
-}
+
 .accordion-item.open::before {
   transform: scaleY(1);
 }
@@ -848,7 +860,7 @@ section {
 }
 
 .stars {
-  color: var(--gold-light);
+  color: var(--gold);
   font-size: 1.1rem;
   margin-bottom: 20px;
   display: block;
@@ -949,6 +961,35 @@ section {
 }
 
 /* ===== ABOUT ===== */
+.about-sunflower{
+  position: absolute;
+  top: 25%;
+  /* transform: translateX(100%); */
+  left: 0%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.stem-sunflower-img {
+  width: 480px;
+  height: 480px;
+  object-fit: contain;
+  /* animation: sunflower-spin 60s linear infinite; */
+  filter: drop-shadow(0 8px 40px rgba(201, 149, 42, 0.45));
+  mix-blend-mode: multiply;
+  opacity: 0.20;
+  display: block;
+}
+
+@media (max-width: 500px) {
+  .stem-sunflower-img {
+    width: 400px;
+    height: 400px;
+  }
+  .about-sunflower{
+    top: 15%;
+  }
+}
 #about {
   background: var(--warm-white);
   position: relative;
