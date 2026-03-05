@@ -149,7 +149,8 @@ nav.scrolled {
 /* ===== HERO ===== */
 .hero {
   min-height: 100vh;
-  background:
+  background: var(--warm-white);
+  /* background:
     radial-gradient(
       ellipse 70% 60% at 100% 0%,
       rgba(232, 184, 48, 0.14) 0%,
@@ -166,7 +167,7 @@ nav.scrolled {
       var(--cream) 40%,
       var(--cream-green) 80%,
       #f0f4ee 100%
-    );
+    ); */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -207,7 +208,7 @@ nav.scrolled {
   z-index: 1;
 } */
 
-.hero-orb {
+/* .hero-orb {
   position: absolute;
   border-radius: 50%;
   pointer-events: none;
@@ -224,8 +225,8 @@ nav.scrolled {
     transparent 70%
   );
   animation: drift 16s ease-in-out infinite;
-}
-.hero-orb-2 {
+} */
+/* .hero-orb-2 {
   width: 500px;
   height: 500px;
   bottom: -150px;
@@ -248,9 +249,9 @@ nav.scrolled {
   66% {
     transform: translate(-15px, 20px);
   }
-}
+} */
 
-.hero-dots {
+/* .hero-dots {
   position: absolute;
   inset: 0;
   background-image: radial-gradient(
@@ -265,7 +266,7 @@ nav.scrolled {
     transparent 75%
   );
   pointer-events: none;
-}
+} */
 
 /* ===== SPINNING SUNFLOWER ===== */
 .hero-sunflower {
@@ -284,7 +285,7 @@ nav.scrolled {
   width: 740px;
   height: 740px;
   object-fit: contain;
-  animation: sunflower-spin 60s linear infinite;
+  /* animation: sunflower-spin 60s linear infinite; */
   filter: drop-shadow(0 8px 40px rgba(201, 149, 42, 0.45));
   mix-blend-mode: multiply;
   opacity: 0.3;
@@ -320,12 +321,12 @@ nav.scrolled {
 }
 .hero h1 em {
   font-style: italic;
-  color: var(--gold);
+  color: var(--text-dark);
 }
 
 .hero-sub {
-  font-size: clamp(0.72rem, 1.6vw, 0.85rem);
-  color: var(--text-muted);
+  font-size: clamp(1rem, 1.2vw, 0.85rem);
+  color: var(--text-mid);
   font-weight: 500;
   letter-spacing: 0.26em;
   text-transform: uppercase;
@@ -402,12 +403,12 @@ nav.scrolled {
 
 /* ===== TAGLINE STRIP ===== */
 .tagline-strip {
-  background: linear-gradient(
+  /* background: linear-gradient(
     90deg,
     var(--cream-warm) 0%,
     #fff8ee 50%,
     var(--cream-warm) 100%
-  );
+  ); */
   border-top: 1px solid var(--gold-border);
   border-bottom: 1px solid var(--gold-border);
   color: var(--text-mid);
@@ -689,12 +690,12 @@ section {
 }
 
 .accordion-item.open::before {
-  transform: scaleY(1);
+  transform: scaleY(1); 
 }
 
 /* ===== EDUCATION ===== */
 #education {
-  background: var(--text-dark);
+  background: var(--cream-warm);
   position: relative;
   overflow: hidden;
 }
@@ -703,13 +704,13 @@ section {
   color: var(--gold);
 }
 #education .section-label::before {
-  background: var(--gold);
+  background: var(--warm-white);
 }
 #education .section-title {
-  color: var(--cream);
+  color: var(--text-dark);
 }
 #education .services-intro {
-  color: rgba(253, 249, 244, 0.55);
+  color:var(--text-dark);
 }
 
 .edu-poster-grid {
@@ -733,7 +734,7 @@ section {
   border: 1px solid rgba(201, 149, 42, 0.1);
   cursor: default;
   transition: background 0.4s ease;
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--warm-white);
 }
 .edu-poster-block:hover {
   background: rgba(201, 149, 42, 0.06);
@@ -746,7 +747,7 @@ section {
   font-family: "Playfair Display", serif;
   font-size: clamp(7rem, 14vw, 11rem);
   font-weight: 600;
-  color: rgba(201, 149, 42, 0.07);
+  color: var(--cream-warm);
   line-height: 1;
   pointer-events: none;
   transition:
@@ -775,7 +776,7 @@ section {
   font-family: "Playfair Display", serif;
   font-size: clamp(1.4rem, 2.8vw, 2rem);
   font-weight: 600;
-  color: var(--cream);
+  color: var(--text-mid);
   line-height: 1.2;
   margin-bottom: 16px;
   position: relative;
@@ -783,7 +784,7 @@ section {
   transition: color 0.3s;
 }
 .edu-poster-block:hover h3 {
-  color: var(--gold-pale);
+  color: var(--text-dark);
 }
 
 .edu-poster-rule {
@@ -802,7 +803,7 @@ section {
 
 .edu-poster-block p {
   font-size: 0.9rem;
-  color: rgba(253, 249, 244, 0.5);
+  color: var(--text-mid);
   line-height: 1.8;
   font-weight: 300;
   position: relative;
@@ -811,27 +812,13 @@ section {
   transition: color 0.3s;
 }
 .edu-poster-block:hover p {
-  color: rgba(253, 249, 244, 0.72);
+  color: var(--text-dark);
 }
 
 /* ===== REVIEW CAROUSEL ===== */
 #review {
-  background: linear-gradient(
-    160deg,
-    var(--cream-green) 0%,
-    var(--sage-pale) 50%,
-    var(--cream) 100%
-  );
+  background: var(--warm-white);
   position: relative;
-}
-#review::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--gold), transparent);
 }
 
 .reviews-carousel {
@@ -991,7 +978,7 @@ section {
   }
 }
 #about {
-  background: var(--warm-white);
+  background: var(--cream-warm);
   position: relative;
 }
 
@@ -1072,7 +1059,7 @@ section {
     var(--sage-pale) 40%,
     var(--cream-warm) 100%
   ); */
-  background: var(--cream-warm);
+  background: var(--warm-white);
   /* text-align: center; */
   position: relative;
   overflow: hidden;
