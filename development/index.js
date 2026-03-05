@@ -51,7 +51,7 @@ window.addEventListener('scroll', () => {
 
   function resetAutoplay() {
     clearInterval(autoplayTimer);
-    autoplayTimer = setInterval(() => goTo(current + 1), 5000);
+    autoplayTimer = setInterval(() => goTo(current + 1), 10000);
   }
 
   prevBtn.addEventListener('click', () => { goTo(current - 1); resetAutoplay(); });
