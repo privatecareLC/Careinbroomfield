@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Dancing+Script:wght@400;600;700&family=Jost:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Jost:wght@300;400;500;600&display=swap");
 
 :root {
   --gold: #c9952a;
@@ -24,8 +24,8 @@
   /* ── Typography scale (accessibility: larger for older readers) ── */
   --fs-sm:   .9rem;      /* nav links, badges, labels         */
   --fs-base: 1rem;   /* body copy baseline                */
-  --fs-md:   1.3rem;    /* slightly elevated body            */
-  --fs-lg:   1.5rem;    /* cards, credentials, review text   */
+  --fs-md:   1.4rem;    /* slightly elevated body            */
+  --fs-lg:   1.6rem;    /* cards, credentials, review text   */
 
   --fw-light:  400;
   --fw-regular: 500;
@@ -67,11 +67,6 @@ body {
 }
 
 /* ===== NAV ===== */
-.nav-sunflower {
-  position: relative;
-  z-index: 99;
-}
-
 .nav-sunflower-img {
   width: 26px;
   height: 26px;
@@ -352,24 +347,6 @@ section {
   max-width: 1060px;
   margin: 0 auto;
 }
-.section-label {
-  font-size: var(--fs-sm);
-  letter-spacing: 0.26em;
-  text-transform: uppercase;
-  color: var(--gold);
-  font-weight: var(--fw-bold);
-  margin-bottom: 8px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.section-label::before {
-  content: "";
-  display: inline-block;
-  width: 24px;
-  height: 1px;
-  background: var(--gold);
-}
 .section-title {
   font-family: "Dancing Script", cursive;
   font-size: clamp(2.6rem, 5.5vw, 4.2rem);
@@ -403,15 +380,6 @@ section {
   position: relative;
 }
 
-.services-intro {
-  font-size: var(--fs-md);
-  line-height: 1.35;
-  color: var(--text-muted);
-  max-width: 600px;
-  margin-bottom: 52px;
-  font-weight: var(--fw-light);
-}
-
 .accordion-two-col {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -437,19 +405,6 @@ section {
   display: flex;
   align-items: center;
   gap: 16px;
-  cursor: pointer;
-  text-align: left;
-}
-
-.accordion-trigger {
-  width: 100%;
-  background: none;
-  border: none;
-  padding: 24px 0;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  cursor: pointer;
   text-align: left;
 }
 
@@ -475,22 +430,6 @@ section {
   transition: color 0.25s;
 }
 
-.accordion-chevron {
-  display: none;
-}
-
-.accordion-body {
-  display: none;
-}
-
-.accordion-trigger {
-  cursor: default;
-}
-
-.accordion-item.open {
-  background: none;
-}
-
 /* ===== EDUCATION + ABOUT (combined) ===== */
 #education {
   background: var(--cream-warm);
@@ -498,38 +437,10 @@ section {
   overflow: hidden;
 }
 
-#education .section-label {
-  color: var(--gold);
-}
-#education .section-label::before {
-  background: var(--gold);
-}
-#education .section-title {
-  color: var(--text-dark);
-}
-
-.about-sunflower {
-  position: absolute;
-  top: 30%;
-  left: 15%;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.stem-sunflower-img {
-  width: 480px;
-  height: 480px;
-  object-fit: contain;
-  filter: drop-shadow(0 8px 40px rgba(201, 149, 42, 0.45));
-  mix-blend-mode: multiply;
-  opacity: 0.2;
-  display: block;
-}
-
 /* About intro block inside education section */
 .about-intro-block {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 52px;
   align-items: start;
   position: relative;
@@ -582,7 +493,7 @@ section {
 .credentials-list li {
   font-style: italic;
   font-size: var(--fs-lg);
-  font-weight: var(--fw-bold );
+  font-weight: var(--fw-bold);
   color: var(--text-dark);
   padding: 3px 0;
   display: flex;
@@ -758,15 +669,6 @@ section {
     transparent 80%
   );
   pointer-events: none;
-}
-#contact .section-label {
-  color: var(--gold);
-}
-#contact .section-label::before {
-  background: var(--gold);
-}
-#contact .section-title {
-  color: var(--text-dark);
 }
 
 .contact-intro {

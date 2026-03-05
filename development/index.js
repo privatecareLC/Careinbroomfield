@@ -68,32 +68,3 @@ window.addEventListener('scroll', () => {
     }, { passive: true });
   }
 })();
-
-// Services accordion — two independent columns
-(function () {
-  function initAccordion(accordionId) {
-    const accordion = document.getElementById(accordionId);
-    if (!accordion) return;
-
-    accordion.addEventListener('click', (e) => {
-      const trigger = e.target.closest('.accordion-trigger');
-      if (!trigger) return;
-      const item = trigger.closest('.accordion-item');
-      const isOpen = item.classList.contains('open');
-
-      // Close all within this column
-      accordion.querySelectorAll('.accordion-item.open').forEach(openItem => {
-        openItem.classList.remove('open');
-        openItem.querySelector('.accordion-trigger').setAttribute('aria-expanded', 'false');
-      });
-
-      if (!isOpen) {
-        item.classList.add('open');
-        trigger.setAttribute('aria-expanded', 'true');
-      }
-    });
-  }
-
-  initAccordion('servicesAccordionLeft');
-  initAccordion('servicesAccordionRight');
-})();
