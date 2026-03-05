@@ -20,6 +20,17 @@
   --text-light: #a08c72;
   --sunflower-brown: #8b5e2a;
   --brown-light: #c4955a;
+
+  /* ── Typography scale (accessibility: larger for older readers) ── */
+  --fs-sm:   .9rem;      /* nav links, badges, labels         */
+  --fs-base: 1rem;   /* body copy baseline                */
+  --fs-md:   1.3rem;    /* slightly elevated body            */
+  --fs-lg:   1.5rem;    /* cards, credentials, review text   */
+
+  --fw-light:  400;
+  --fw-regular: 500;
+  --fw-medium: 600;
+  --fw-bold:   700;
 }
 
 *,
@@ -35,9 +46,12 @@ html {
 
 body {
   font-family: "Jost", sans-serif;
+  font-size: var(--fs-md);
+  font-weight: var(--fw-regular);
   background: var(--cream);
   color: var(--text-dark);
   overflow-x: hidden;
+  line-height: 1.8;
 }
 
 /* ===== SCROLL PROGRESS ===== */
@@ -90,7 +104,7 @@ nav.scrolled {
   font-family: "Dancing Script", cursive;
   color: var(--text-dark);
   font-size: 1.65rem;
-  font-weight: 600;
+  font-weight: var(--fw-bold);
   letter-spacing: 0.02em;
   display: flex;
   align-items: center;
@@ -109,10 +123,10 @@ nav.scrolled {
 .nav-links a {
   color: var(--text-muted);
   text-decoration: none;
-  font-size: 0.85rem;
+  font-size: var(--fs-sm);
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: var(--fw-medium);
   transition: color 0.25s;
   position: relative;
 }
@@ -221,9 +235,9 @@ nav.scrolled {
 }
 
 .hero-sub {
-  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  font-size: var(--fs-sm);
   color: var(--text-mid);
-  font-weight: 500;
+  font-weight: var(--fw-medium);
   letter-spacing: 0.22em;
   text-transform: uppercase;
   margin-bottom: 36px;
@@ -246,10 +260,10 @@ nav.scrolled {
   color: var(--text-mid);
   padding: 9px 22px;
   border-radius: 40px;
-  font-size: 0.85rem;
+  font-size: var(--fs-sm);
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: var(--fw-medium);
   backdrop-filter: blur(8px);
   transition:
     background 0.2s,
@@ -268,8 +282,8 @@ nav.scrolled {
   color: #fff;
   padding: 18px 56px;
   border-radius: 4px;
-  font-size: 0.95rem;
-  font-weight: 600;
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-bold);
   letter-spacing: 0.18em;
   text-decoration: none;
   text-transform: uppercase;
@@ -314,9 +328,9 @@ nav.scrolled {
   margin: 0 auto 36px;
 }
 .mission-quote {
-  /* font-style: italic; */
-  font-weight: 400;
-  font-size: clamp(1.3rem, 2.8vw, 1.9rem);
+  font-weight: var(--fw-regular);
+  /* font-size: clamp(1.1rem, 2.2vw, 1.5rem); */
+  font-size: var(--fs-lg);
   color: var(--text-dark);
   line-height: 1.9;
   max-width: 850px;
@@ -327,7 +341,7 @@ nav.scrolled {
 .mission-quote em {
   color: var(--text-dark);
   font-style: normal;
-  /* font-weight: 600; */
+  font-weight: var(--fw-medium);
 }
 .mission-sig {
   font-family: "Dancing Script", cursive;
@@ -346,11 +360,11 @@ section {
   margin: 0 auto;
 }
 .section-label {
-  font-size: 0.82rem;
+  font-size: var(--fs-sm);
   letter-spacing: 0.26em;
   text-transform: uppercase;
   color: var(--gold);
-  font-weight: 600;
+  font-weight: var(--fw-bold);
   margin-bottom: 8px;
   display: flex;
   align-items: center;
@@ -397,12 +411,12 @@ section {
 }
 
 .services-intro {
-  font-size: 1.15rem;
+  font-size: var(--fs-md);
   line-height: 1.95;
   color: var(--text-muted);
   max-width: 600px;
   margin-bottom: 52px;
-  font-weight: 300;
+  font-weight: var(--fw-light);
 }
 
 .accordion-two-col {
@@ -441,7 +455,7 @@ section {
 }
 
 .accordion-icon {
-  font-size: 1.4rem;
+  font-size: var(--fs-lg);
   flex-shrink: 0;
   width: 44px;
   height: 44px;
@@ -459,9 +473,8 @@ section {
 }
 
 .accordion-title {
-  /* font-family: "Playfair Display", serif; */
-  font-size: 1.4rem;
-  font-weight: 500;
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-medium);
   color: var(--text-dark);
   flex: 1;
   transition: color 0.25s;
@@ -599,15 +612,15 @@ section {
 }
 
 .about-text-col p {
-  font-size: 1.5rem;
+  font-size: var(--fs-lg);
   line-height: 1.95;
   color: var(--text-dark);
   margin-bottom: 20px;
-  font-weight: 300;
+  font-weight: var(--fw-regular);
 }
 .about-text-col p strong {
   color: var(--text-dark);
-  font-weight: 600;
+  font-weight: var(--fw-bold);
 }
 
 /* Credentials white box */
@@ -636,8 +649,8 @@ section {
 }
 
 .credentials-list li {
-  /* font-family: "Playfair Display", serif; */
-  font-size: 1.5rem;
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-regular);
   color: var(--text-dark);
   padding: 13px 0;
   border-bottom: 1px solid rgba(201, 149, 42, 0.12);
@@ -654,9 +667,8 @@ section {
 .credentials-list li::before {
   content: "✓";
   color: var(--gold);
-  font-size: 1rem;
-  /* font-family: "Jost", sans-serif; */
-  font-weight: 600;
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-bold);
   flex-shrink: 0;
   width: 20px;
   text-align: center;
@@ -695,7 +707,7 @@ section {
 
 .stars {
   color: var(--gold);
-  font-size: 1.4rem;
+  font-size: var(--fs-lg);
   margin-bottom: 20px;
   display: block;
   letter-spacing: 4px;
@@ -703,10 +715,9 @@ section {
   z-index: 1;
 }
 .review-text {
-  /* font-family:'Times New Roman', Times, serif; */
   font-style: italic;
-  font-weight: 600;
-  font-size: clamp(1.2rem, 2.4vw, 1.5rem);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-lg);
   color: var(--text-dark);
   line-height: 1.95;
   margin-bottom: 32px;
@@ -715,11 +726,11 @@ section {
   max-width: 720px;
 }
 .review-author {
-  font-size: 1rem;
+  font-size: var(--fs-sm);
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--gold);
-  font-weight: 600;
+  font-weight: var(--fw-bold);
   position: relative;
   z-index: 1;
   display: flex;
@@ -749,7 +760,7 @@ section {
   border: 1px solid var(--gold-border);
   background: rgba(255, 255, 255, 0.85);
   color: var(--gold);
-  font-size: 1.3rem;
+  font-size: var(--fs-md);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -828,11 +839,11 @@ section {
 }
 
 .contact-intro {
-  font-size: 1.4rem;
+  font-size: var(--fs-md);
   color: var(--text-dark);
   margin-bottom: 48px;
   line-height: 1.85;
-  font-weight: 300;
+  font-weight: var(--fw-light);
   position: relative;
   z-index: 1;
 }
@@ -900,16 +911,16 @@ section {
   box-shadow: 0 8px 32px rgba(201, 149, 42, 0.14);
 }
 .contact-card .label {
-  font-size: 1.2rem;
+  font-size: var(--fs-sm);
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--gold);
   margin-bottom: 6px;
-  font-weight: 600;
+  font-weight: var(--fw-bold);
 }
 .contact-card .value {
-  font-size: 1.4rem;
-  font-weight: 500;
+  font-size: var(--fs-md);
+  font-weight: var(--fw-medium);
   color: var(--text-dark);
 }
 .contact-card .value a {
@@ -980,9 +991,10 @@ section {
 }
 
 .card-hint {
-  font-size: 0.9rem;
+  font-size: var(--fs-sm);
   color: var(--text-light);
   font-style: italic;
+  font-weight: var(--fw-light);
 }
 
 /* ===== FOOTER ===== */
@@ -991,7 +1003,8 @@ footer {
   color: rgba(253, 249, 244, 0.45);
   text-align: center;
   padding: 28px 24px;
-  font-size: 0.92rem;
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-light);
   letter-spacing: 0.1em;
   border-top: 2px solid var(--gold);
 }
