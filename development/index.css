@@ -473,6 +473,7 @@ section {
   border-radius: 16px;
   padding: 18px 22px;
   box-shadow: 0 4px 24px rgba(201, 149, 42, 0.08);
+
 }
 
 .credentials-heading {
@@ -488,6 +489,15 @@ section {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 16px;
+}
+
+@media (max-width: 600px) {
+  .credentials-list {
+    grid-template-columns: 1fr;
+  }
 }
 
 .credentials-list li {
@@ -756,6 +766,12 @@ section {
   line-height: 1.4;
   word-break: break-word;
   overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+  .contact-card .value{
+    font-size: 1.5rem;
+  }
 }
 
 .contact-card .value a {
