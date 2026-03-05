@@ -320,17 +320,9 @@ nav.scrolled {
   overflow: hidden;
 }
 
-/* .mission-banner .rule {
-  display: block;
-  width: 60px;
-  height: 1px;
-  background: var(--gold);
-  margin: 0 auto 36px;
-} */
 .mission-quote {
   font-style: italic;
   font-weight: var(--fw-regular);
-  /* font-size: clamp(1.1rem, 2.2vw, 1.5rem); */
   font-size: var(--fs-lg);
   color: var(--text-dark);
   line-height: 1.25;
@@ -433,8 +425,6 @@ section {
   }
 }
 
-
-
 .accordion-item {
   border-bottom: 1px solid rgba(201, 149, 42, 0.2);
   position: relative;
@@ -477,10 +467,6 @@ section {
     transform 0.3s;
 }
 
-/* .accordion-item.open .accordion-icon {
-  transform: scale(1.08) rotate(5deg);
-} */
-
 .accordion-title {
   font-size: var(--fs-lg);
   font-weight: var(--fw-medium);
@@ -488,80 +474,17 @@ section {
   flex: 1;
   transition: color 0.25s;
 }
-/* .accordion-item.open .accordion-title,
-.accordion-trigger:hover .accordion-title {
-  color: var(--gold);
-} */
 
 .accordion-chevron {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: 1px solid rgba(201, 149, 42, 0.3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  position: relative;
-  transition:
-    background 0.3s,
-    border-color 0.3s,
-    transform 0.35s;
-}
-.accordion-chevron::before,
-.accordion-chevron::after {
-  content: "";
-  position: absolute;
-  background: var(--gold);
-  border-radius: 2px;
-  transition:
-    transform 0.35s ease,
-    opacity 0.35s;
-}
-.accordion-chevron::before {
-  width: 10px;
-  height: 1.5px;
-}
-.accordion-chevron::after {
-  width: 1.5px;
-  height: 10px;
-}
-.accordion-item.open .accordion-chevron {
-  background: var(--gold-dim);
-  border-color: var(--gold);
-  transform: rotate(45deg);
-}
-
-.accordion-body {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows 0.42s cubic-bezier(0.22, 1, 0.36, 1);
-}
-.accordion-item.open .accordion-body {
-  grid-template-rows: 1fr;
-}
-
-.accordion-body-inner {
-  overflow: hidden;
-}
-
-/* Accordion descriptions hidden — titles only */
-.accordion-content {
   display: none;
 }
 
-/* Remove chevron expand indicator since there's nothing to expand */
 .accordion-body {
   display: none;
 }
 
-/* Make accordion items non-expandable, just a clean list */
 .accordion-trigger {
   cursor: default;
-}
-
-.accordion-chevron {
-  display: none;
 }
 
 .accordion-item.open {
@@ -880,53 +803,65 @@ section {
 
 @media (max-width: 800px) {
   .contact-info-col {
-    align-items: center;
+    align-items: stretch;
+    width: 100%;
   }
 }
 
 .contact-cards {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 0;
   width: 100%;
 }
 
-@media (max-width: 800px) {
-  .contact-cards {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: last left;
+/* ── Contact items: open, no box ── */
+.contact-card {
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(201, 149, 42, 0.18);
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+}
+
+/* On small screens: stack label above value */
+@media (max-width: 600px) {
+  .contact-card {
+    flex-direction: column;
+    gap: 4px;
+    padding: 20px 0;
   }
 }
 
-.contact-card {
-  /* background: rgba(255, 255, 255, 0.85); */
-  /* border: 1px solid var(--gold-border); */
-  /* border-radius: 14px; */
-  padding: 0px 10px;
-  color: var(--text-dark);
-  text-align: left;
-  /* backdrop-filter: blur(12px); */
+.contact-card:last-child {
+  border-bottom: none;
 }
 
 .contact-card .label {
-  font-size: var(--fs-lg);
-  letter-spacing: 0.22em;
+  font-size: var(--fs-sm);
+  letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--gold);
-  margin-bottom: 6px;
   font-weight: var(--fw-medium);
+  flex-shrink: 0;
+  min-width: 100px;
 }
+
 .contact-card .value {
   font-size: var(--fs-lg);
   font-weight: var(--fw-bold);
   color: var(--text-dark);
+  line-height: 1.4;
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
+
 .contact-card .value a {
   color: var(--text-dark);
   text-decoration: none;
   transition: color 0.2s;
 }
+
 .contact-card .value a:hover {
   color: var(--gold);
 }
@@ -936,12 +871,15 @@ section {
   flex-direction: column;
   align-items: center;
   gap: 12px;
+  width: 100%;
 }
 
 /* ===== BUSINESS CARD ===== */
 .card-container {
   perspective: 1200px;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 .card-inner {
   position: relative;
@@ -954,8 +892,8 @@ section {
 
 @media (max-width: 480px) {
   .card-inner {
-    width: 300px;
-    height: 172px;
+    width: min(340px, 90vw);
+    height: calc(min(340px, 90vw) * 0.574);
   }
 }
 
