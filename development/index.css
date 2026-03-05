@@ -468,9 +468,9 @@ section {
     transform 0.3s;
 }
 
-.accordion-item.open .accordion-icon {
+/* .accordion-item.open .accordion-icon {
   transform: scale(1.08) rotate(5deg);
-}
+} */
 
 .accordion-title {
   font-size: var(--fs-lg);
