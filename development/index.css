@@ -356,6 +356,23 @@ section {
   line-height: 1.1;
 }
 
+@media (max-width: 500px) {
+  .section-title {
+    font-size: 2.6rem;
+  }
+}
+@media (max-width: 400px) {
+  .section-title {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 320px) {
+  .section-title {
+    font-size: 1.6rem;
+  }
+}
+
+
 /* ===== SERVICES — 2-COLUMN ACCORDION ===== */
 .services-sunflower {
   position: absolute;
