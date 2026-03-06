@@ -22,15 +22,15 @@
   --brown-light: #c4955a;
 
   /* ── Typography scale (accessibility: larger for older readers) ── */
-  --fs-sm:   .9rem;      /* nav links, badges, labels         */
-  --fs-base: 1rem;   /* body copy baseline                */
-  --fs-md:   1.4rem;    /* slightly elevated body            */
-  --fs-lg:   1.6rem;    /* cards, credentials, review text   */
+  --fs-sm: 0.9rem; /* nav links, badges, labels         */
+  --fs-base: 1rem; /* body copy baseline                */
+  --fs-md: 1.4rem; /* slightly elevated body            */
+  --fs-lg: 1.6rem; /* cards, credentials, review text   */
 
-  --fw-light:  400;
+  --fw-light: 400;
   --fw-regular: 500;
   --fw-medium: 600;
-  --fw-bold:   700;
+  --fw-bold: 700;
 }
 
 *,
@@ -162,7 +162,7 @@ nav.scrolled {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 140px 24px 100px;
+  padding: 140px 24px 20px;
   position: relative;
   overflow: hidden;
 }
@@ -202,8 +202,12 @@ nav.scrolled {
 }
 
 @keyframes sunflower-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @media (max-width: 500px) {
@@ -309,7 +313,7 @@ nav.scrolled {
 /* ===== MISSION BANNER ===== */
 .mission-banner {
   background: var(--cream-warm);
-  padding: 80px 48px;
+  padding: 20px 48px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -372,7 +376,6 @@ section {
   }
 }
 
-
 /* ===== SERVICES — 2-COLUMN ACCORDION ===== */
 .services-sunflower {
   position: absolute;
@@ -391,10 +394,10 @@ section {
   opacity: 0.2;
   display: block;
 }
-
 #services {
   background: var(--warm-white);
   position: relative;
+  padding: 20px 24px;
 }
 
 .accordion-two-col {
@@ -452,6 +455,7 @@ section {
   background: var(--cream-warm);
   position: relative;
   overflow: hidden;
+  padding: 24px 20px;
 }
 
 /* About intro block inside education section */
@@ -482,8 +486,6 @@ section {
   color: var(--text-dark);
   font-weight: var(--fw-bold);
 }
-
-
 
 .credentials-list {
   list-style: none;
@@ -530,6 +532,7 @@ section {
 #review {
   background: var(--warm-white);
   position: relative;
+  padding: 24px 20px;
 }
 
 .reviews-carousel {
@@ -662,6 +665,7 @@ section {
   background: var(--cream-warm);
   position: relative;
   overflow: hidden;
+  padding: 24px 20px;
 }
 #contact::before {
   content: "";
@@ -769,7 +773,7 @@ section {
 }
 
 @media (max-width: 600px) {
-  .contact-card .value{
+  .contact-card .value {
     font-size: 1.5rem;
   }
 }
